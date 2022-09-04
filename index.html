@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Testseite! </title>
+    <meta charset="utf-8" />
+  </head>
+  
+  <body>
+    <a name="Seitenanfang"></a>
+    <header>
+      <h2> Eine einfache Testseite </h2>
+    </header>
+    
+    <p> Veränderung2!<br><br/>
+      Das war ein Zeilenumbruch. 汉字 <br />
+      Wörter zusammenhalten mit non-breaking backspace: Windows&nbsp;10. Sonst sollte man aber
+      automatische Umbrüche und nicht break verwenden absdjflsdfjas asföjasföasföasj öadlfjsödfj
+      lskflskdjflas alfjsadlfkjaklsdjf asdfs lasfklsdf asdfsdf.
+    </p>
+    <p align="center"> Nun ein Paragraph in der Mitte. <br />
+      noch eine zeile.
+    </p>
+    <h1> Größte Überschrift.  </h1>
+    <h2> Überschrift.  </h2>
+    <h3> Überschrift.  </h3>
+    <h4> Überschrift.  </h4>
+    <h5> Überschrift.  </h5>
+    <h6> Kleinste Überschrift.  </h6>
+    <h2> Einige Sonderzeichen  </h2>
+    <p> &euro; &copy; &laquo; </p>
+    <h2> Preformatierter Text </h2>
+    <p> Wird genau wie im HTML-Code dargestellt, z.B. gut für Code oder ASCII-Art (1. ohne
+      Strukturtag):
+      <pre> public class HelloWorld {
+	        system.out.println("Hello, World!");
+	    }
+      </pre>
+      (2. mit Strukturtag)
+      <code>
+	<pre> public class HelloWorld {
+	        system.out.println("Hello, World!");
+	      }
+	</pre>
+      </code>
+       Scheinbar auch mit anderer Schriftart und Schriftgröße?
+    </p>
+    <h2> Hochstellung  </h2>
+    <p>
+      a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup>
+    </p>
+    <h2> unordered list &ltul&gt </h2>
+    <p>
+      Der Typ der Listenpunkte kann für jedes einzelne Listenelement
+      <ul>
+	<li type="disc"> irgendwas </li>
+	<li type="circle"> noch irgendwas </li>
+	<li type="square"> was anderes </li>
+      </ul>
+      oder für die gesamte Liste
+      <ul type="square">
+	<li> irgendwas </li>
+	<li> noch irgendwas </li>
+	<li> was anderes </li>
+	<li> Unteraufzählung
+	  <ul>
+	    <li> A </li>
+	    <li> B </li>
+	    <li> C </li>
+	  </ul>
+	</li>	
+      </ul>
+      bestimmt werden. <br />
+      Aufzählungen von Hyperlinks werden weitverbreitet auf Websites verwendet, um
+      Navigationsbereiche zu modellieren. Dabei werden sie mit CSS so modifiziert, dass
+      sie nicht mehr wie eine Liste aussehen. 
+    </p>
+    <h2> ordered list ol </h2>
+    <p> Startwert muss immer numerisch angegeben werden (d.h. auch bei alphatbetischer Sortierung
+      etc).
+      <ol type="A" start=4>
+	<li> irgendwas </li>
+	<li> noch irgendwas </li>
+	<li> was anderes </li>
+	<li> Unteraufzählung
+	  <ul>
+	    <li> A </li>
+	    <li> B </li>
+	    <li> C </li>
+	  </ul>
+	</li>
+      </ol>
+    </p>
+    <h2> Definitionslisten dl </h2>
+    <p> Einrückung
+      <dl>
+	<dt> Definitionstitel </dt>
+	<dd> Definitionsdaten </dd>
+	<dt> blabla </dt>
+	<dd> blubblubblub </dd>
+      </dl>
+    </p>
+    <a name="Hyperlinks"></a>
+    <h2> Hyperlinks </h2>
+    <h3> lokal </h3>
+    <p> blabla <a href="subdirectory1/about.html"> Über uns </a> . a steht für anchor, href
+      für hypertext reference.
+    </p>
+    <h2> Links auf andere Website und deren Dokumente </h2>
+    <p>
+      Es macht Sinn eine Linkliste zu halten, um regelmäßig zu prüfen, ob alle noch gehen. 
+      Hier ist ein <a href="https://www.bilibili.com/video/BV1Nv4y1P7Qc?share_source=copy_web">
+	Bilibili-Video. </a>
+    </p>
+    <p>
+      Und hier ist ein Test von Bilibili's iframe-link. <br />     
+      <iframe src="//player.bilibili.com/player.html?aid=554392050&bvid=BV1Nv4y1P7Qc&cid=731237081&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    </P>
+    <h3> Datei in Browser anzeigen vs. Download erzwingen </h3>
+    <p> Im Browser : <a href="images/froggy.png">
+	Froschbild als PNG </a>
+    </p>
+    <p id="force_download"> Download erzwingen:
+      <a href="frog_force_download/froggy.png"> Froschbild als PNG </a>
+      (Bild in separaten Download-Ordner, dessen Direktive in conf folgendermaßen angepasst)
+      <pre>
+	<code>
+	  &ltDirectory /var/www/test1website/frog_force_download/&gt
+	     ForceType application/octet-stream
+          &lt/Directory&gt
+	</code>
+      </pre>
+      Funktioniert noch nicht.
+    </p>
+    <h3> An Emai </h3>
+    <p> Email mit voreingestelltem Betreff:
+      <a href="mailto:renwasabi@t-online.de?subject=Feedback"> Email an mich!</a>
+      sollte in Client-Standardemail-App geöffnet werden.
+    </p>
+    <h3> Seiteninterne Hyperlinks (Anker) </h3>
+    <p> Der Text der Anker selbst (hier
+      <a href="#Seitenanfang"> Seitenanfang </a>) sollte leer sein. </p>
+    <h3> Seitenextern auf Anker </h3>
+    <p> Z.b. hier auf bestimmten Abschnitt eines Wikipedia-Artikels:
+      <a href="https://en.wikipedia.org/wiki/Emacs#General_architecture"> Link </a>
+    </p>
+    <h2> Bilder einbetten </h2>
+    <p>
+      <img src="images/froggy.png" height="530" width="766" title="image of a frog"
+	   align="right" /> 
+      Mauszeiger über Bild zeigt den Inhalt des Titel-Attributes. Die Größe sollte im Tag
+      angegeben werden, damit der umgebende Text schon vorher korrekt gelanden werden kann. 
+    </p> <br />
+    <p>
+      <img src="images/froggy.png" height="530" width="766" title="image of a frog"
+	   align="right" /> <br clear="all" />
+      Hier kein Textumfließen wegen clear. Geht auch mit CSS.  
+    </p>
+    <p> Es gibt eine fancy Sache namens data-URI-Einbettung, um Bilder in Binär direkt
+      in der html-Datei zu speichern.
+    </p>
+    <h3> Bilder als Hyperlinks </h3>
+    <p> Das folgende Bild ist ein Link: <br clear="all">
+      <a href="https://en.wikipedia.org/wiki/Frog">
+	<img src="images/froggy2.png" height="319" width="475" border="0" />
+      </a>
+      <br clear="all">
+      border="0", da sonst manche Browser einen Rahmen in Hyperlink-Farbe um das Bild
+      ziehen könnten.
+    </p>
+    <h3> Image Maps </h3>
+    <p> Später mal ansehen. </p>
+    <h2> Kommentare </h2>
+    <p> Hier ist ein Kommentar: <!-- Kommentar blabla --> . Sind aber öffentlich im Quellcode
+      sichtbar. </p>
+    <h2> Tabellen </h2>
+    <p>
+      <table border="5">
+	<caption align="bottom">Bestandteile von HMTL-Tabellen</caption>
+	<tr>
+	  <th>Element</th>
+	  <th>Erläuterung</th>
+	</tr>
+	<tr>
+	  <th>table</th>
+	  <td>Die eigentliche Tabelle</td>
+	</tr>
+	<tr>
+	  <th>th</th>
+	  <td>table heading</td>
+	</tr>
+	<tr>
+	  <th>tr</th>
+	  <td>Tabellenzeile (table row)</td>
+	</tr>
+	<tr>
+	  <th>td</th>
+	  <td>Tabellenzelle (table data)</td>
+	</tr>
+      </table>
+      Bei Border wird die Breite des Rahmens in Pixeln angegeben.
+      Es gibt noch sehr viele Möglichkeiten, um Tabellen zu formattieren und komplexer zu machen. 
+    </p>
+    <h2>Formulare</h2>
+    <p>
+      Wichtig als Frontend, gibt URL an, an die die Eingaben versandt werden, viele Möglichkeiten.
+      <br />
+      Beispiel: <a href="pizza.html">Pizza-Bestellformular</a>
+    
+      
+      
+    
+ 
+
+    
+    
+    
+	
+    
+	
+    
+    <footer>
+      <p> my footer </p>
+    </footer>
+    
+    
+      
+	
+      
+
+  </body>
+</html>
